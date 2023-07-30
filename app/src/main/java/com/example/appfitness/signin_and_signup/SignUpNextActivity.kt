@@ -3,6 +3,7 @@ package com.example.appfitness.signin_and_signup
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.appfitness.databinding.ActivitySignInNextBinding
+import com.example.appfitness.objects.ButtonsNavigation
 import com.example.appfitness.objects.ColorNotificationBarWhite
 
 class SignUpNextActivity : AppCompatActivity() {
@@ -14,5 +15,8 @@ class SignUpNextActivity : AppCompatActivity() {
         setContentView(view)
 
         ColorNotificationBarWhite.colorBarWhite(this)
+        binding.btnNext.setOnClickListener {
+            ButtonsNavigation.nextAcitivity(this, wiyg1Activity::class.java)
+        }
     }
 }

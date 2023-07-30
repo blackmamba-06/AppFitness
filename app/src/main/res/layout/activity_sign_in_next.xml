@@ -49,12 +49,24 @@
             android:layout_height="45dp"
             android:layout_marginBottom="8dp"
             android:background="@drawable/background_edittexxt_sl"
-            android:drawableStart="@drawable/genere"/>
+            android:drawableStart="@drawable/genere"
+            android:hint="Choose Gender"
+            android:paddingStart="12dp"
+            android:drawablePadding="8dp"
+            android:drawableEnd="@drawable/arrow_down"
+            android:paddingEnd="12dp"
+            android:textSize="15dp"/>
 
         <androidx.appcompat.widget.AppCompatEditText
             android:layout_width="315dp"
             android:layout_height="45dp"
             android:layout_marginBottom="8dp"
+            android:hint="Date of Birth"
+            android:textSize="15dp"
+            android:drawableStart="@drawable/calendar"
+            android:drawablePadding="8dp"
+            android:paddingStart="12dp"
+            android:inputType="datetime"
             android:background="@drawable/background_edittexxt_sl" />
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -67,8 +79,13 @@
                 android:layout_width="260dp"
                 android:layout_height="45dp"
                 android:background="@drawable/background_edittexxt_sl"
-                android:layout_marginEnd="8dp"/>
-            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_marginEnd="8dp"
+                android:drawableStart="@drawable/weight"
+                android:hint="Your Weight"
+                android:textSize="15dp"
+                android:paddingStart="12dp"
+                android:drawablePadding="8dp"/>
+            <androidx.appcompat.widget.AppCompatImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:src="@drawable/buttonkg"/>
@@ -83,8 +100,13 @@
                 android:layout_width="260dp"
                 android:layout_height="45dp"
                 android:background="@drawable/background_edittexxt_sl"
-                android:layout_marginEnd="8dp"/>
-            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_marginEnd="8dp"
+                android:hint="Your Height"
+                android:textSize="15dp"
+                android:drawableStart="@drawable/swap"
+                android:paddingStart="12dp"
+                android:drawablePadding="8dp"/>
+            <androidx.appcompat.widget.AppCompatImageButton
                 android:layout_width="wrap_content"
                 android:layout_height="45dp"
                 android:src="@drawable/buttomcm"/>
@@ -92,13 +114,17 @@
         </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnRegister"
+            android:id="@+id/btnNext"
             android:layout_width="315dp"
             android:layout_height="60dp"
             android:layout_marginTop="30dp"
             android:background="@drawable/button_background_signup"
             android:text="Next"
             android:gravity="center"
+            android:drawableEnd="@drawable/arrow_right"
+            android:drawableTint="@color/white"
+            android:paddingStart="125dp"
+            android:paddingEnd="125dp"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18dp" />
