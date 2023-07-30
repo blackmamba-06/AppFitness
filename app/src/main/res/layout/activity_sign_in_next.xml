@@ -48,7 +48,8 @@
             android:layout_width="315dp"
             android:layout_height="45dp"
             android:layout_marginBottom="8dp"
-            android:background="@drawable/background_edittexxt_sl" />
+            android:background="@drawable/background_edittexxt_sl"
+            android:drawableStart="@drawable/genere"/>
 
         <androidx.appcompat.widget.AppCompatEditText
             android:layout_width="315dp"
