@@ -16,7 +16,7 @@ class SignUpNextActivity : AppCompatActivity() {
 
         ColorNotificationBarWhite.colorBarWhite(this)
         binding.btnNext.setOnClickListener {
-            ButtonsNavigation.nextAcitivity(this, wiyg1Activity::class.java)
+            ButtonsNavigation.nextAcitivity(this, Wiyg1Activity::class.java)
         }
     }
 }

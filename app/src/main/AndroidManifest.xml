@@ -19,17 +19,18 @@
             android:exported="false"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".signin_and_signup.welcomeActivity"
+            android:name=".signin_and_signup.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".signin_and_signup.wiyg3Activity"
+            android:name=".signin_and_signup.Wiyg3Activity"
             android:exported="false" />
         <activity
-            android:name=".signin_and_signup.wiyg2Activity"
+            android:name=".signin_and_signup.Wiyg2Activity"
             android:exported="false" />
         <activity
-            android:name=".signin_and_signup.wiyg1Activity"
-            android:exported="false" />
+            android:name=".signin_and_signup.Wiyg1Activity"
+            android:exported="false"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".signin_and_signup.SignInActivity"
             android:exported="false"
