@@ -120,9 +120,11 @@ class SignUpActivity : AppCompatActivity() {
     private fun transportNameToWelcomeActivity(){
         binding.btnRegister.setOnClickListener {
             val name  = binding.etFirstName.text.toString().trim()
+            val lastName = binding.etLastName.text.toString().trim()
             if (name.isNotEmpty()){
                 val intent = Intent(this, SignUpNextActivity::class.java)
                 intent.putExtra("NAME", name)
+                intent.putExtra("LAST_NAME", lastName)
                 startActivity(intent)
             }
         }

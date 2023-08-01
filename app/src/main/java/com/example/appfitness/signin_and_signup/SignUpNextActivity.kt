@@ -18,8 +18,10 @@ class SignUpNextActivity : AppCompatActivity() {
 
         binding.btnNext.setOnClickListener {
             val name = intent.getStringExtra("NAME")
+            val lastName = intent.getStringExtra("LAST_NAME")
             val intent = Intent(this, Wiyg1Activity::class.java)
             intent.putExtra("NAME", name)
+            intent.putExtra("LAST_NAME", lastName)
             startActivity(intent)
             }
         }

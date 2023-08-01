@@ -17,8 +17,10 @@ class Wiyg1Activity : AppCompatActivity() {
         ColorNotificationBarWhite.colorBarWhite(this)
         binding.btnConfirm.setOnClickListener {
             val name = intent.getStringExtra("NAME")
+            val lastName = intent.getStringExtra("LAST_NAME")
             val intent = Intent(this, Wiyg2Activity::class.java)
             intent.putExtra("NAME", name)
+            intent.putExtra("LAST_NAME", lastName)
             startActivity(intent)
         }
 

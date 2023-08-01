@@ -58,6 +58,7 @@
             android:textSize="15dp" />
 
         <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etLastName"
             android:layout_width="315dp"
             android:layout_height="45dp"
             android:layout_marginBottom="8dp"
