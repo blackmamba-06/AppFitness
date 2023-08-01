@@ -33,13 +33,11 @@ class SignUpActivity : AppCompatActivity() {
         binding.tvLogin.setOnClickListener {
             ButtonsNavigation.nextAcitivity(this, SignInActivity::class.java)
         }
-        binding.btnRegister.setOnClickListener {
-            ButtonsNavigation.nextAcitivity(this, SignUpNextActivity::class.java)
-        }
 
         ColorNotificationBarWhite.colorBarWhite(this)
         showAndHidePassword()
         privacyAndCondicionsTextView(fullText)
+        transportNameToWelcomeActivity()
 
 
     }
@@ -116,6 +114,18 @@ class SignUpActivity : AppCompatActivity() {
     private fun openUrlInBrowser(url: String) {
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
         startActivity(intent)
+    }
+
+
+    private fun transportNameToWelcomeActivity(){
+        binding.btnRegister.setOnClickListener {
+            val name  = binding.etFirstName.text.toString().trim()
+            if (name.isNotEmpty()){
+                val intent = Intent(this, SignUpNextActivity::class.java)
+                intent.putExtra("NAME", name)
+                startActivity(intent)
+            }
+        }
     }
 }
 

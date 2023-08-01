@@ -8,4 +8,6 @@ object ButtonsNavigation {
         val intent = Intent(context, destinationActivity)
         context.startActivity(intent)
     }
+
+
 }

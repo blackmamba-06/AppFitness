@@ -79,7 +79,7 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="10dp"
                 android:layout_marginBottom="30dp"
                 android:src="@drawable/border_text" />
 
@@ -105,7 +105,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btnRegister"
+        android:id="@+id/btnConfirm"
         android:layout_width="315dp"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
