@@ -48,69 +48,179 @@
             android:src="@drawable/notificacion" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="315dp"
-        android:layout_height="0dp"
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/lyHeader">
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:layout_width="315dp"
-            android:layout_height="145dp"
-            android:background="@drawable/background_home"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp">
 
             <androidx.appcompat.widget.LinearLayoutCompat
-                android:layout_width="132dp"
+                android:id="@+id/lyBanner"
+                android:layout_width="315dp"
                 android:layout_height="145dp"
-                android:layout_marginStart="20dp"
-                android:layout_weight="1"
-                android:gravity="center_vertical"
-                android:orientation="vertical">
+                android:background="@drawable/background_home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                <androidx.appcompat.widget.AppCompatTextView
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="132dp"
+                    android:layout_height="145dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:text="BMI (Body Mass Index)"
+                        android:textColor="@color/white"
+                        android:textSize="14dp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="15dp"
+                        android:text="You have a normal weight"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:layout_width="95dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/background_second_color"
+                        android:text="View More"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="10dp"
+                        android:textStyle="bold" />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="5dp"
-                    android:text="BMI (Body Mass Index)"
-                    android:textColor="@color/white"
-                    android:textSize="14dp" />
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:text="You have a normal weight"
-                    android:textColor="@color/white"
-                    android:textSize="12dp" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:layout_width="95dp"
-                    android:layout_height="35dp"
-                    android:background="@drawable/background_second_color"
-                    android:text="View More"
-                    android:textAllCaps="false"
-                    android:textColor="@color/white"
-                    android:textSize="10dp"
-                    android:textStyle="bold" />
+                    android:layout_gravity="center"
+                    android:layout_marginEnd="20dp"
+                    android:src="@drawable/banner_pie" />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginEnd="20dp"
-                android:src="@drawable/banner_pie" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/lyAction"
+                android:layout_width="315dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/backgrund_actions"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lyBanner">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:text="Today Target"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="68dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/button_background_blue"
+                    android:text="Check"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="12dp" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvActivityStatus"
+                android:layout_width="118dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="30dp"
+                android:text="Activity Status"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/lyAction" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="315dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/backgrund_actions"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvActivityStatus">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="Heart Reat"
+                            android:textColor="@color/black"
+                            android:textSize="12dp"
+                            android:layout_weight="1"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="78 BPM"
+                            android:textColor="#92A3FD"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            android:layout_weight="1"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="78dp"
+                        android:layout_marginTop="35dp"
+                        android:src="@drawable/nube2"
+                        android:layout_weight="1"/>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="315dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/grafica">
+
+                </androidx.appcompat.widget.AppCompatImageView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </androidx.core.widget.NestedScrollView>
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
